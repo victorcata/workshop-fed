@@ -4,9 +4,18 @@ The idea of this workshop is to create the Front-End side starting from the grap
 
 The process will start thinking in how to tuckle the project to make a Front-End architecture maintenable and an easy way to componetize the UI so we can modify it easily for future improvements. At the end, we are going to communicate our Front-End with a REST API that it's going to bring us all the data that we will need.
 
-- Thinking in components
-- Responsive vs Adaptive design
-- Mobile-First vs Desktop-First
+## Agenda
+  - Day 1:
+  - Day 2:
+  - Day 3:
+  
+## Concepts
+  - Thinking in Components
+  - Responsive vs Adaptive design
+  - Mobile-First vs Desktop-First
+
+## Languages basics 
 - HTML5 semantic
 - CSS3 Basics
 - Vanilla JavaScript
+
