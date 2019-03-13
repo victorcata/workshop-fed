@@ -921,50 +921,19 @@ app
 - [SMACSS Course Frontend Masters by Jonathan Snook](https://frontendmasters.com/courses/smacss/?u=83c5033cb7d4129b73f4255d154ceb45210e43e2)
 
 ## JavaScript
-- [JavaScript Language Syntax](#javascript-language-syntax)
-    - [Console](#console)
-        - [Methods](#methods)
-        - [Console Formating](#console-formating)
-        - [Special characters](#special-characters)
+- [Console](#console)
 - [User interaction](#user-interaction)
 - [Strict Mode](#strict-mode)
 - [Data Types](#data-types)
-    - [Special values](#special-values)
-    - [Natives](#natives)
-    - [Negative zero](#negative-zero)
-    - [Object.is](#objectis)
-    - [typeof](#typeof)
 - [Coercion](#coercion)
 - [Numbers](#numbers)
-    - [Properties](#properties)
-    - [Methods](#methods-1)
 - [Strings](#strings)
-    - [Properties](#properties-1)
-    - [Methods](#methods-2)
 - [Objects](#objects)
-    - [Creating an object](#creating-an-object)
-    - [Deleting a property](#deleting-a-property)
-    - [Properties](#properties-2)
-    - [Methods](#methods-3)
-    - [Object instance Properties](#object-instance-properties)
-    - [Object instance Methods](#object-instance-methods)
 - [Functions](#functions)
-    - [Declaration](#declaration)
-    - [Methods](#methods-4)
 - [Arrays](#arrays)
-    - [Creating an array](#creating-an-array)
-    - [Deleting an element](#deleting-an-element)
-    - [Properties](#properties-3)
-    - [Methods](#methods-5)
-    - [Array instance Methods](#array-instance-methods)
 - [Math](#math)
 - [Dates](#dates)
-    - [Constructor](#constructor)
-    - [Getters](#getters)
-    - [Setters](#setters)
-    - [Formatting](#formatting)
-
-<!-- /TOC -->
+	
 #### Console
 ##### Methods
 - **assert:** If the assertion is false the message is written to the console
@@ -1374,143 +1343,135 @@ str.repeat([count])
 ```javascript
 str.replace([regEx], [string])
 ```
+
 ### Objects
-```javascript
-typeof null
-typeof ['a','b']
-typeof new Date()
-typeof {a: 1}
-```
-##### Creating an object
+##### Constructor
 ```javascript
 var obj = {
   prop: value,
   method: function(){ }
 }
+
+// What is an object in JavaScript
+typeof null
+typeof ['a','b']
+typeof new Date()
+typeof {a: 1}
 ```
+
 ##### Deleting a property
 ```javascript
 delete obj.prop;
 obj.prop = undefined;
 ```
+
 ##### Properties
-- **prototype:** allows the addition of properties to all objects of type Object 
 ```javascript
+// Allows the addition of properties to all objects of type Object 
 Object.prototype
 ```
+
 ##### Methods
-- **keys:** returns an array containing the names of all of the given object's own properties
 ```javascript
+// Returns an array containing the names of all of the given object's own properties
 Object.keys(obj)
-```
-- **entries:** returns an array with the property pairs [key, value]
-```javascript
+
+// Returns an array with the property pairs [key, value]
 Object.entries(obj)
-```
-- **defineProperty:** defines a new property on an object or modifies an existing property and returns the object
-```javascript
+
+// Defines a new property on an object or modifies an existing property and returns the object
 Object.defineProperty(obj, prop, { enumerable: false, configurable: false, writable: flase, value: 'static'})
-```
-- **defineProperties:** defines new or modifies existing properties on an object
-```javascript
+
+// Defines new or modifies existing properties on an object
 Object.defineProperties(obj, { 'prop': { value: true, writable: true }})
-```
-- **getPrototypeOf:** returns the prototype of the specified object
-```javascript
+
+// Returns the prototype of the specified object
 Object.getPrototypeOf(obj)
-```
-- **getOwnPropertyDescriptor:** returns a property descriptor for an own property
-```javascript
+
+// Returns a property descriptor for an own property
 Object.getOwnPropertyDescriptor(obj, 'prop')
-```
-- **getOwnPropertyNames:** returns an array of all properties
-```javascript
+
+// Returns an array of all properties
 Object.getOwnPropertyNames(obj)
-```
-- **seal/isSealed:** prevents other code from deleting properties of an object. isSealed determines if an object is sealed
-```javascript
-Object.seal(obj) | Object.isSealed(obj)
-```
-- **freeze/isFrozen:** other code can't delete or change any properties. isFrozen determines if the object is freeze
-```javascript
-Object.freeze(obj) | Object.isFrozen(obj)
-```
-- **isExtensible:** determines if extending an object is allowed
-```javascript
+
+// Prevents other code from deleting properties of an object. isSealed determines if an object is sealed
+Object.seal(obj)
+Object.isSealed(obj)
+
+// Other code can't delete or change any properties. isFrozen determines if the object is freeze
+Object.freeze(obj)
+Object.isFrozen(obj)
+
+// Determines if extending an object is allowed
 Object.isExtensible(obj)
-```
-- **preventExtensions:** prevents any extensions of an object
-```javascript
+
+// Prevents any extensions of an object
 Object.preventExtensions(obj)
-```
-- **is:** Determines if two objects are identical
-```javascript
+
+// Determines if two objects are identical
 Object.is(NaN, NaN)
 ```
+
 ##### Object instance Properties
-- **constructor:** specifies the function that creates an object's prototype
 ```javascript
+// Specifies the function that creates an object's prototype
 Object.prototype.constructor
-```
-- **__proto__:** points to the object which was used as prototype when the object was instantiated
-```javascript
+
+// Points to the object which was used as prototype when the object was instantiated
 Object.prototype.__proto__
 ```
+
 ##### Object instance Methods
-- **hasOwnProperty:** determines whether an object contains the specified property of the object and not inherited through the prototype
 ```javascript
+// Determines whether an object contains the specified property of the object and not inherited through the prototype
 obj.hasOwnProperty('prop')
-```
-- **propertyIsEnumerable:** determines if the enumerable attribute is set
-```javascript
+
+// Determines if the enumerable attribute is set
 obj.propertyIsEnumerable('prop')
-```
-- **toString/toLocaleString:** strings representation of the object
-```javascript
-obj.toString() | obj.toLocaleString()
-```
-- **isPrototypeOf:** determines whether the specified object is in the prototype chain of the object
-```javascript
+
+// Strings representation of the object
+obj.toString()
+obj.toLocaleString()
+
+// Determines whether the specified object is in the prototype chain of the object
 obj.isPrototypeOf(obj)
-```
-- **valueOf:** returns the primitive value of the specified object
-```javascript
+
+// Returns the primitive value of the specified object
 obj.valueOf()
-```
-Note: The order is arbitrary and they aren't show in the order it was defined
-```javascript
+
+// Note: The order is arbitrary and they aren't show in the order it was defined
 for (var i obj) { obj[i] }
 ```
-### Functions
 
+### Functions
 ##### Declaration
-**Function constructor VS Function declarator**
+**Function constructor VS Function declarator:**
+
 Function constructor do not create closures to their creation contexts; they always are created in the global scope.
 They will only be able to access their own local variables and global ones, not the ones from the scope in which the Function constructor was called.
+
 ```javascript
 function constructor (){ }
 var declarator = function () { }
 ```
+
 ##### Methods
 - **apply:** calls a function with a given this value and arguments provides as an array
 ```javascript
-fn.prototype.apply(thisArg, [args, ...])
-```
-- **call:** calls a function with a given this value and arguments provided individually
-```javascript
-fn.prototype.call(thisArgs, args, ...)
-```
-- **bind:** creates a new function that has its this keyword set to the provided value
-```javascript
-fn.prototype.bind(thisArgs, args, ...)
-```
-- **isGenerator:** determines whether or not a function is a generator
-```javascript
-fn.prototype.isGenerator()
-```
-- **toSource:** returns a string representing the source code of the object
-```javascript
-fn.prototype.toSource()
+// Calls a function with a given this value and arguments provided individually
+myFunction.prototype.apply(thisArg, [args, ...])
+
+// Creates a new function that has its this keyword set to the provided value
+myFunction.prototype.call(thisArgs, args, ...)
+
+// Creates a new function that has its this keyword set to the provided value
+myFunction.prototype.bind(thisArgs, args, ...)
+
+// Determines whether or not a function is a generator
+myFunction.prototype.isGenerator()
+
+// Returns a string representing the source code of the object
+myFunction.prototype.toSource()
 ```
 
 ### Arrays
