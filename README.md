@@ -1539,84 +1539,39 @@ Array.isArray([obj])
 Array.from([arr]);
 ```
 ##### Array instance Methods
-- **toString/toLocalString:** returns an string representing the array and its elements
 ```javascript
-arr.toString() | arr.toLocaleString()
+// Returns an string representing the array and its elements
+myArray.toString()		
+myArray.toLocaleString()
+
+// Removes the first element from an array and returns that element
+myArray.shift()			
+myArray.unshift([elements])		// adds one or more element to the front of an array and returns the length of the array
+
+myArray.pop()			// removes the last element from an array and returns that element
+myArray.push([elements])		// adds one or more elements to the end of the array
+
+myArray.splice(position, length, [elements])	// Removes or adds elements to an array. Returns the deleted elements.
+myArray.slice([from], [to])		// returns a copy of a portion of the array into a new array. 
+
+myArray.concat([array])		// returns a merged array from two or more arrays
+myArray.join([string])		// joins all elements of an array into a stirng
+
+myArray.indexOf([item])		// returns the first index of an element withing the array or -1 if none is found
+myArray.lastIndexOf([item])
+
+myArray.sort()			// sorts the elements of an array in place and returns the array
+myArray.reverse()			// reverses an array in place
+myArray.forEach(function(element, index, array))	// executes a function once for each element in the array
+myArray.map(function(element)) 	// creates a new array with the results of calling a provided function on every element in this array
+myArray.some(function(element, index, array))	// returns true if one element in the array satisfies the testing function
+myArray.every(function(element, index, array)) 	// true if every element in this array satisfies the testing function
+myArray.filter(function(element))		// creates a new array with the elements which the filtering function returns true
+myArray.reduce(function(prev, actual, index, array))	// apply a function against an accumulator and each value of the array from left to right to reduce it to a single value
+myArray.reduceRight(function(prev, actual, index, array))	// apply a function against an accumulator and each value of the array from right to left to reduce it to a single value
 ```
-- **shift:** removes the first element from an array and returns that element
-```javascript
-arr.shift()
-```
-- **pop:** removes the last element from an array and returns that element
-```javascript
-arr.pop()
-```
-- **unshift:** adds one or more element to the front of an array and returns the length of the array
-```javascript
-arr.unshift([elements])
-```
-- **push:** adds one or more elements to the end of the array
-```javascript
-arr.push([elements])
-```
-- **splice:** changes the contents of an array by removing elements and/or adding new elements. Returns the deleted elements.
-```javascript
-arr.splice(position, length, [elements])
-```
-- **slice:** returns a copy of a portion of the array into a new array. The original array will not be modified
-```javascript
-arr.slice([from], [to])
-```
-- **concat:** returns a merged array from two or more arrays
-```javascript
-arr.concat([array])
-```
-- **join:** joins all elements of an array into a stirng
-```javascript
-arr.join([string])
-```
-- **indexOf/lastIndexOf:** returns the first index of an element withing the array or -1 if none is found
-```javascript
-arr.indexOf([item]) | arr.lastIndexOf([item])
-```
-- **sort:** sorts the elements of an array in place and returns the array
-```javascript
-arr.sort()
-```
-- **reverse:** reverses an array in place
-```javascript
-arr.reverse()
-```
-- **forEach:** executes a function once for each element in the array
-```javascript
-arr.forEach(function(element, index, array))
-```
-- **map:** creates a new array with the results of calling a provided function on every element in this array
-```javascript
-arr.map(function(element)) 
-```
-- **some:** returns true if one element in the array satisfies the testing function
-```javascript
-arr.some(function(element, index, array))
-```
-- **every:** true if every element in this array satisfies the testing function
-```javascript
-arr.every(function(element, index, array)) 
-```
-- **filter:** creates a new array with the elements which the filtering function returns true
-```javascript
-arr.filter(function(element)) - 
-```
-- **reduce:** apply a function against an accumulator and each value of the array from left to right to reduce it to a single value
-```javascript
-arr.reduce(function(prev, actual, index, array))
-```
-- **reduceRight:** apply a function against an accumulator and each value of the array from right to left to reduce it to a single value
-```javascript
-arr.reduceRight(function(prev, actual, index, array))
-```
+
 ### Math
-- **abs:** returns the absolute value of a number
 ```javascript
 Math.abs([number]) 	// Returns the absolute value of a number
 
@@ -1640,44 +1595,6 @@ Math.round([number])
 Math.min([number, ...])
 Math.max([number, ...])
 
-Math.trunc([number])
-```
-- **acos/cos/asin/sin/atan/tan:** return the respective geometrical operation of a number
-```javascript
-Math.cos([number])
-Math.sin([number])
-Math.tan([number])
-```
-- **ceil:** returns the smallest integer greater than or equal to the number
-```javascript
-Math.ceil([number])
-```
-- **floor:** returns the larges integer less than or equal to a number
-```javascript
-Math.floor([number])
-```
-- **sqrt:** returns the positive square root of the number
-```javascript
-Math.sqrt([number])
-```
-- **random:** returns a pseudo-random number between 0 and 1
-```javascript
-Math.random() * (max - min) + min;
-```
-- **round:** returns the nearest integer of the number
-```javascript
-Math.round([number])
-```
-- **min:** returns the smallest of zero or more numbers
-```javascript
-Math.min([number, ...])
-```
-- **max:** returns the largest of zero or more numbers
-```javascript
-Math.max([number, ...])
-```
-- **trunc:** returns the integral part of the number
-```javascript
 Math.trunc([number])
 ```
 ### Dates
