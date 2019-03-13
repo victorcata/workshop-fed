@@ -1618,7 +1618,29 @@ arr.reduceRight(function(prev, actual, index, array))
 ### Math
 - **abs:** returns the absolute value of a number
 ```javascript
-Math.abs([number])
+Math.abs([number]) 	// Returns the absolute value of a number
+
+Math.cos([number])	// Return the respective geometrical operation of a number
+Math.acos([number])
+Math.sin([number])
+Math.asin([number])
+Math.tan([number])
+Math.atan([number])
+
+Math.ceil([number])	// Returns the smallest integer greater than or equal to the number
+
+Math.floor([number])
+
+Math.sqrt([number])
+
+Math.random() * (max - min) + min;
+
+Math.round([number])
+
+Math.min([number, ...])
+Math.max([number, ...])
+
+Math.trunc([number])
 ```
 - **acos/cos/asin/sin/atan/tan:** return the respective geometrical operation of a number
 ```javascript
