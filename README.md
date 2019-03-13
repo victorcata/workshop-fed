@@ -1512,8 +1512,9 @@ fn.prototype.isGenerator()
 ```javascript
 fn.prototype.toSource()
 ```
+
 ### Arrays
-##### Creating an array
+##### Constructor
 ```javascript
 var array = []
 var array = [1, 2, 3]
@@ -1525,78 +1526,118 @@ delete array[2];
 array[2] = undefined
 ```
 ##### Properties
-- **length:** sets or returns the number of elements in an array
 ```javascript
+// Sets or returns the number of elements in an array
 array.length
 ```
+
 ##### Methods
-- **isArray:**  true if a variable is an array
 ```javascript
+// True if a variable is an array
 Array.isArray([obj])
-```
-- **from:** creates a new array instance from an array object
-```javascript
+
+// Creates a new array instance from an array object
 Array.from([arr]);
 ```
+
 ##### Array instance Methods
 ```javascript
 // Returns an string representing the array and its elements
-myArray.toString()		
+myArray.toString()	
 myArray.toLocaleString()
 
 // Removes the first element from an array and returns that element
-myArray.shift()			
-myArray.unshift([elements])		// adds one or more element to the front of an array and returns the length of the array
+myArray.shift()	
 
-myArray.pop()			// removes the last element from an array and returns that element
-myArray.push([elements])		// adds one or more elements to the end of the array
+// Adds one or more element to the front of an array and returns the length of the array
+myArray.unshift([elements])
 
-myArray.splice(position, length, [elements])	// Removes or adds elements to an array. Returns the deleted elements.
-myArray.slice([from], [to])		// returns a copy of a portion of the array into a new array. 
+// Removes the last element from an array and returns that element
+myArray.pop()
 
-myArray.concat([array])		// returns a merged array from two or more arrays
-myArray.join([string])		// joins all elements of an array into a stirng
+// Adds one or more elements to the end of the array
+myArray.push([elements])		
 
-myArray.indexOf([item])		// returns the first index of an element withing the array or -1 if none is found
+// Removes or adds elements to an array. Returns the deleted elements.
+myArray.splice(position, length, [elements])
+
+// Returns a copy of a portion of the array into a new array. 
+myArray.slice([from], [to])		
+
+// Returns a merged array from two or more arrays
+myArray.concat([array])
+
+// Joins all elements of an array into a stirng
+myArray.join([string])		
+
+// Returns the first/last index of an element withing the array or -1 if none is found
+myArray.indexOf([item])		
 myArray.lastIndexOf([item])
 
-myArray.sort()			// sorts the elements of an array in place and returns the array
-myArray.reverse()			// reverses an array in place
-myArray.forEach(function(element, index, array))	// executes a function once for each element in the array
-myArray.map(function(element)) 	// creates a new array with the results of calling a provided function on every element in this array
-myArray.some(function(element, index, array))	// returns true if one element in the array satisfies the testing function
-myArray.every(function(element, index, array)) 	// true if every element in this array satisfies the testing function
-myArray.filter(function(element))		// creates a new array with the elements which the filtering function returns true
-myArray.reduce(function(prev, actual, index, array))	// apply a function against an accumulator and each value of the array from left to right to reduce it to a single value
-myArray.reduceRight(function(prev, actual, index, array))	// apply a function against an accumulator and each value of the array from right to left to reduce it to a single value
+// Sorts the elements of an array in place and returns the array
+myArray.sort()			
+
+// Reverses an array in place
+myArray.reverse()			
+
+// Executes a function once for each element in the array
+myArray.forEach(function(element, index, array))	
+
+// Creates a new array with the results of calling a provided function on every element in this array
+myArray.map(function(element)) 	
+
+// Returns true if one element in the array satisfies the testing function
+myArray.some(function(element, index, array))	
+
+// True if every element in this array satisfies the testing function
+myArray.every(function(element, index, array)) 
+
+// Creates a new array with the elements which the filtering function returns true
+myArray.filter(function(element))
+
+// Apply a function against an accumulator and each value of the array from left to right or viceversa to reduce it to a single value
+myArray.reduce(function(prev, actual, index, array))
+myArray.reduceRight(function(prev, actual, index, array))
 ```
 
 ### Math
 ```javascript
-Math.abs([number]) 	// Returns the absolute value of a number
+// Returns the absolute value of a number
+Math.abs([number]) 	
 
-Math.cos([number])	// Return the respective geometrical operation of a number
+// Return the respective geometrical operation of a number
+Math.cos([number])	
 Math.acos([number])
 Math.sin([number])
 Math.asin([number])
 Math.tan([number])
 Math.atan([number])
 
-Math.ceil([number])	// Returns the smallest integer greater than or equal to the number
+// Returns the smallest integer greater than or equal to the number
+Math.ceil([number])	
 
+// Returns the larges integer less than or equal to a number
 Math.floor([number])
 
+// Returns the positive square root of the number
 Math.sqrt([number])
 
+// Returns a pseudo-random number between 0 and 1
 Math.random() * (max - min) + min;
 
+// Returns the nearest integer of the number
 Math.round([number])
 
+// Returns the smallest of zero or more numbers
 Math.min([number, ...])
+
+// Returns the largest of zero or more numbers
 Math.max([number, ...])
 
+// Returns the integral part of the number
 Math.trunc([number])
 ```
+
 ### Dates
 ##### Constructor
 ```javascript
@@ -1606,6 +1647,7 @@ new Date('January 1, 1982')
 new Date([year], [month], [date], [hour], [minutes], [seconds], [milliseconds])
 new Date(Date.UTC(2016, 1, 1))
 ```
+
 ##### Getters
 ```javascript
 date.getFullYear() | date.getUTCFullYear()
@@ -1619,6 +1661,7 @@ date.getMilliseconds() | date.getUTCMilliseconds()
 date.getTime()
 date.getTimezoneOffset()
 ```
+
 ##### Setters
 ```javascript
 date.setFullYear() | date.setUTCFullYear()
@@ -1629,6 +1672,7 @@ date.setSeconds() | date.setUTCSeconds()
 date.setMilliseconds() | date.setUTCMilliseconds()
 date.setTime() 
 ```
+
 ##### Formatting
 ```javascript
 date.toString()
