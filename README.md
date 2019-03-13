@@ -13,6 +13,12 @@ The process will start thinking in how to tuckle the project to make a Front-End
   - Thinking in Components
   - Responsive vs Adaptive design
   - Mobile-First vs Desktop-First
+  
+### Responsive vs Adaptive design
+**Responsive:** djkañls dkañl sd
+**Adaptive:** añlsdkañl sdkañl sd
+
+https://www.interaction-design.org/literature/article/adaptive-vs-responsive-design 
 
 ## Languages basics 
 - HTML5 semantic
